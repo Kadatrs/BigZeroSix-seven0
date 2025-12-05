@@ -8,9 +8,82 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+<style>
+    /* --- CSS CHO CÁC NÚT ĐIỀU HƯỚNG --- */
+    
+    .btn-nav {
+        position: absolute;
+        top: 20px;
+        text-decoration: none;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 50px; /* Bo tròn hoàn toàn (pill shape) hợp với Comfortaa */
+        font-family: 'Comfortaa', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        z-index: 1000;
+    }
+
+    .btn-nav:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Nút Quay lại (Góc Trái - Màu Xám Đậm) */
+    .btn-retour {
+        left: 20px;
+        background-color: #546e7a; 
+    }
+    .btn-retour:hover {
+        background-color: #455a64;
+    }
+
+    /* Nút Game (Góc Phải - Màu Xanh Tái Chế) */
+    .btn-game {
+        right: 20px;
+        background-color: #43a047; /* Màu xanh lá cây tươi */
+    }
+    .btn-game:hover {
+        background-color: #2e7d32;
+    }
+
+    /* Đẩy nội dung xuống để nút không che mất Header */
+    header {
+        position: relative; 
+        padding-top: 60px; 
+    }
+
+    /* Responsive cho điện thoại */
+    @media (max-width: 600px) {
+        .btn-nav {
+            padding: 8px 15px;
+            font-size: 12px;
+            top: 15px;
+        }
+        .btn-retour { left: 10px; }
+        .btn-game { right: 10px; }
+    }
+</style>
+
 </head>
 
 <body>
+
+<!-- 1. NÚT QUAY LẠI -->
+<a href="wordle.html" class="btn-nav btn-retour">
+    &#8592; Retour
+</a>
+
+<!-- 2. NÚT ĐẾN GAME RECYCLER -->
+<a href="game_recycler.html" class="btn-nav btn-game">
+    Jeu Recycler ♻️
+</a>
 
 <header>
     <h1>Recycler</h1>
@@ -113,4 +186,3 @@ function genererIdee() {
 
 </body>
 </html>
-
